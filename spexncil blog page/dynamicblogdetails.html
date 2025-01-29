@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .blog-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .blog-image {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .blog-title {
+            font-size: 2em;
+            margin-top: 10px;
+            color: #333;
+        }
+        .blog-description {
+            margin-top: 15px;
+            font-size: 1.2em;
+            color: #555;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-container" id="blog-details">
+        <!-- Blog details will be dynamically inserted here -->
+    </div>
+    <script>
+        // Get the blog ID from the URL query parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const blogId = parseInt(urlParams.get('id'), 10);
+
+        // Fetch blogs from localStorage
+        const blogs = JSON.parse(localStorage.getItem('blogs')) || [];
+
+        // Find the blog with the matching ID
+        const blog = blogs.find(blog => blog.id === blogId);
+
+        if (blog) {
+            // Dynamically insert the blog details into the page
+            const blogDetailsContainer = document.getElementById('blog-details');
+            blogDetailsContainer.innerHTML = `
+                <img src="${blog.imageUrl}" alt="${blog.title}" class="blog-image">
+                <h1 class="blog-title">${blog.title}</h1>
+                <p class="blog-description">${blog.description}</p>
+                <a href="blog.html" class="back-button">Back to Blogs</a>
+            `;
+        } else {
+            // Display an error message if the blog is not found
+            const blogDetailsContainer = document.getElementById('blog-details');
+            blogDetailsContainer.innerHTML = `
+                <h1>Blog Not Found</h1>
+                <p>Sorry, the blog you're looking for doesn't exist.</p>
+                <a href="blog.html" class="back-button">Back to Blogs</a>
+            `;
+        }
+    </script>
+</body>
+</html>

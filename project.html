@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="projects.css">
+    <link rel="icon" sizes="16x16" href="WhatsApp Image 2024-12-26 at 12.56.42_6a61f921-modified.png">
+    <link rel="icon" sizes="32x32" href="WhatsApp Image 2024-12-26 at 12.56.42_6a61f921-modified.png">
+    <link rel="apple-touch-icon" href="WhatsApp Image 2024-12-26 at 12.56.42_6a61f921-modified.png">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo"></div>
+        <div class="menu">
+            <a class="home" href="index.html">Home</a>
+            <a class="skill" href="skill.html">Skills</a>
+            <a class="project" href="project.html">projects</a>
+            <a class="Contact" href="contact.html">Contact</a>
+        </div>
+        <div class="hamburger" id="hamburger">☰</div>
+    </nav>
+
+    <section class="section">
+        <div class="section-header">
+            <h2>Our Projects</h2>
+            <p class="es">Explore some of our latest work</p>
+        </div>
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="netflix.jfif" alt="Project 1" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Netflix clone</h3>
+                    <p class="project-description">A Netflix clone is a web application designed to replicate the look,
+                        feel, and features of the Netflix platform. It serves as an educational project for learning
+                        frontend and backend technologies. Key aspects of a Netflix clone include:</p>
+                    <a href="netflix clone/index.html" class="project-link">View More</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="toji.jpeg" alt="Project 3" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Spexncil Blog</h3>
+                    <p class="project-description"> anime-based blog page is a platform dedicated to anime enthusiasts,
+                        featuring the latest news, reviews, character analyses, and discussions about trending and
+                        classic anime series. It includes a visually engaging design with a dynamic blog section,
+                        allowing users to browse and read about various anime topics. </p>
+                    <a href="spexncil blog page/index.html" class="project-link">View More</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="food app.jpg" alt="Project 2" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Food app</h3>
+                    <p class="project-description">A Figma food app design is a UI/UX project created using the Figma
+                        design tool, focusing on delivering a visually appealing, user-friendly interface for a food
+                        delivery .The goal is to replicate or improve upon existing food apps like Zomato while
+                        maintaining originality </p>
+                    <a href="https://www.figma.com/proto/L0kZJ7HO72vMn5r015t4EQ/food-app?node-id=5-143&p=f&t=4RPdBa2rBoqS83UQ-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1"
+                        class="project-link">View More</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="spotify.jfif" alt="Project 4" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Spotify clone</h3>
+                    <p class="project-description">A Spotify clone is a web or mobile application designed to replicate
+                        the functionality and design of the Spotify platform. It is often created as a project to learn
+                        or demonstrate skills in frontend and backend development, UI/UX design, and music streaming
+                        integrations</p>
+                    <a href="spotify clone/index.html" class="project-link">View More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        &copy; 2025 Shubham Deshmukh. All rights reserved.
+    </footer>
+
+    <script>
+        // Toggle the menu on small screens
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.querySelector('.menu');
+
+        hamburger.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+
+
+
+        document.addEventListener("visibilitychange", function () {
+            if (document.hidden) {
+                document.title = "Come back soon!";
+            } else {
+                document.title = "Welcome Back!";
+            }
+        });
+
+    </script>
+</body>
+
+</html>

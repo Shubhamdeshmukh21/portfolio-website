@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Details</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="blogdetails.css">
+</head>
+
+<body>
+    <!-- Blog Details Container -->
+    <div class="blog-details-container">
+        <img src="" alt="Blog Image" class="blog-image" id="blog-image">
+        <h1 class="blog-title" id="blog-title">Blog Title</h1>
+        <div class="blog-content" id="blog-content">
+            <p>Blog content will be displayed here based on the selected blog.</p>
+        </div>
+        <a href="index.html" class="back-button">Back to Blogs</a>
+    </div>
+
+    <script>
+        // Get the blog ID from the URL query parameter
+        const params = new URLSearchParams(window.location.search);
+        const blogId = params.get('id');
+
+        // Define blog data
+        const blogs = {
+            "1": {
+                image: "sen.jpeg",
+                title: "10 Tips for Better Productivity",
+                content: `
+                    <p>Discover simple techniques to maximize your daily productivity and get more done in less time. 
+                    From prioritizing tasks to eliminating distractions, these tips can help you take control of your time.</p>
+                    <p>Some of the tips include:</p>
+                    <ul>
+                        <li>Creating a to-do list</li>
+                        <li>Using productivity tools</li>
+                        <li>Taking regular breaks</li>
+                    </ul>
+                `
+            },
+            "2": {
+                image: "Jujutsu Kaisen (1).jpeg",
+                title: "How to Stay Motivated",
+                content: `
+                    <p>Staying motivated can be challenging, especially during tough times. This guide offers practical tips 
+                    to help you maintain your focus and enthusiasm.</p>
+                    <p>Key points include:</p>
+                    <ul>
+                        <li>Setting realistic goals</li>
+                        <li>Finding your "why"</li>
+                        <li>Surrounding yourself with positive influences</li>
+                    </ul>
+                `
+            },
+            "3": {
+                image: "iu.jpeg",
+                title: "Top 5 Travel Destinations",
+                content: `
+                    <p>Explore the most breathtaking travel destinations to add to your bucket list this year. From serene beaches 
+                    to majestic mountains, these destinations offer something for everyone.</p>
+                    <p>Highlights include:</p>
+                    <ul>
+                        <li>Bali, Indonesia</li>
+                        <li>Kyoto, Japan</li>
+                        <li>Amalfi Coast, Italy</li>
+                        <li>Maui, Hawaii</li>
+                        <li>Banff National Park, Canada</li>
+                    </ul>
+                `
+            },
+            "4": {
+                image: "goku.jpeg",
+                title: "Healthy Eating Made Simple",
+                content: `
+                    <p>Maintaining a healthy diet doesn't have to be complicated. Discover easy tips and recipes to help you 
+                    eat healthier without stress.</p>
+                    <p>Suggestions include:</p>
+                    <ul>
+                        <li>Meal prepping</li>
+                        <li>Incorporating more fruits and vegetables</li>
+                        <li>Staying hydrated</li>
+                    </ul>
+                `
+            }
+        };
+
+        // Populate the page with the blog details
+        const blog = blogs[blogId];
+        if (blog) {
+            document.getElementById('blog-image').src = blog.image;
+            document.getElementById('blog-title').innerText = blog.title;
+            document.getElementById('blog-content').innerHTML = blog.content;
+        } else {
+            document.getElementById('blog-title').innerText = "Blog Not Found";
+            document.getElementById('blog-content').innerHTML = "<p>The blog you're looking for does not exist.</p>";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+
+/* Blog Details Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+}
+
+.blog-details-container {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-image {
+    width: 60%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.blog-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin: 20px 0;
+}
+
+.blog-content {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.blog-content p {
+    margin-bottom: 15px;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #587a9c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #435f74;
+}
+
+@media (max-width: 768px) {
+    .blog-title {
+        font-size: 2rem;
+    }
+
+    .blog-content {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-title {
+        font-size: 1.8rem;
+    }
+
+    .blog-content {
+        font-size: 0.8rem;
+    }
+}
+
+

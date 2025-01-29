@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <!-- Logo and Company Name -->
+            <div class="company-section">
+                <img src="profile.png" alt="Company Logo" class="logo">
+                <span class="company-name">Spexncil</span>
+            </div>
+
+            <!-- Hamburger Icon -->
+            <div class="hamburger" id="hamburger">
+                <span class="line1"></span>
+                <span class="line2"></span>
+                <span class="line3"></span>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html"><i class="fas fa-home" ></i> </a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> </a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope" style="color: #2d2b2bb0;"></i></a></li>
+                <li><a href="add.html"><i class="fas fa-plus"></i> </a></li>
+            </ul>
+        </nav>
+    </header>
+
+           <!-- Contact Section -->
+<section class="contact-section">
+    <h2>Contact Us</h2>
+    <p>We'd love to hear from you! Fill out the form below to send us an email.</p>
+
+    <div class="input-container">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name here">
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" placeholder="Enter your email address">
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" placeholder="Enter your subject here">
+
+        <label for="message">Message:</label>
+        <textarea id="message" placeholder="Enter your message here"></textarea>
+    </div>
+
+    <!-- Gmail Links -->
+    <a id="gmailAppLink" class="email-link" href="#" target="_blank">Send Mail (App)</a>
+    <a id="gmailDesktopLink" class="email-link" href="#" target="_blank">Send Mail (Desktop)</a>
+</section>
+
+<!-- JavaScript -->
+<script>
+    // Get the elements
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const subjectInput = document.getElementById('subject');
+    const messageInput = document.getElementById('message');
+    const gmailAppLink = document.getElementById('gmailAppLink');
+    const gmailDesktopLink = document.getElementById('gmailDesktopLink');
+
+   // Function to update the Gmail links dynamically
+function updateGmailLinks() {
+    const name = nameInput.value.trim();
+    const senderEmail = emailInput.value.trim();
+    const subject = encodeURIComponent(subjectInput.value.trim()); // Only encode the subject
+    const messageBody = `From: ${name} (${senderEmail})\n\n${messageInput.value.trim()}`;
+    const message = encodeURIComponent(messageBody); // Encode the message body
+    const recipientEmail = "spexncil@gmail.com"; // Replace with your email address
+
+    // Update the Gmail App link (for mobile Chrome)
+    gmailAppLink.href = `intent://compose?to=${recipientEmail}&subject=${subject}&body=${message}#Intent;scheme=mailto;package=com.google.android.gm;end`;
+
+    // Update the Desktop Gmail link
+    gmailDesktopLink.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipientEmail}&su=${subject}&body=${message}`;
+}
+
+
+    // Add event listeners to update links whenever the user types
+    nameInput.addEventListener('input', updateGmailLinks);
+    emailInput.addEventListener('input', updateGmailLinks);
+    subjectInput.addEventListener('input', updateGmailLinks);
+    messageInput.addEventListener('input', updateGmailLinks);
+
+    // Detect device type and display the appropriate link
+    function detectDevice() {
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+        if (isMobile) {
+            gmailAppLink.style.display = 'inline-block'; // Show mobile link
+            gmailDesktopLink.style.display = 'none';     // Hide desktop link
+        } else {
+            gmailAppLink.style.display = 'none';         // Hide mobile link
+            gmailDesktopLink.style.display = 'inline-block'; // Show desktop link
+        }
+    }
+
+    // Run detection on page load
+    detectDevice();
+</script>
+
+
+
+
+    <footer class="footer">
+        <p style="text-align: center; margin-top: 20px; font-size: 0.9rem;">&copy; 2025 Spexncil. All Rights Reserved.</p>
+    </footer>
+
+
+
+
+    <script>
+
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+    </script>
+</body>
+
+</html>

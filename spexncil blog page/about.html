@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <!-- Logo and Company Name -->
+            <div class="company-section">
+                <img src="profile.png" alt="Company Logo" class="logo">
+                <span class="company-name">Spexncil</span>
+            </div>
+
+            <!-- Hamburger Icon -->
+            <div class="hamburger" id="hamburger">
+                <span class="line1"></span>
+                <span class="line2"></span>
+                <span class="line3"></span>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="blog.html"><i class="fas fa-home" ></i> </a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle" style="color: #2d2b2bb0;"></i> </a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i></a></li>
+                <li><a href="add.html"><i class="fas fa-plus"></i> </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-header">
+            <h2>About Us</h2>
+            <p>Welcome to our anime blog! Dive into a world filled with captivating stories, stunning visuals, and
+                endless inspiration from your favorite anime series. Join us as we explore the artistry and passion
+                behind every frame.</p>
+        </div>
+
+        <div class="about-cards">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="iu.jpeg" alt="Naruto" class="card-logo">
+                <h3>Naruto's Journey</h3>
+                <p>Relive the iconic moments from Naruto's path to becoming Hokage and his journey of perseverance.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="aot.jpeg" alt="Attack on Titan" class="card-logo">
+                <h3>Attack on Titan</h3>
+                <p>Explore the mysteries of the Titans and the epic fight for humanity's survival behind the Walls.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="Totoro.jpeg" alt="Spirited Away" class="card-logo">
+                <h3>Studio Ghibli Magic</h3>
+                <p>Celebrate the enchanting worlds created by Studio Ghibli, from Spirited Away to My Neighbor Totoro.
+                </p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <img src="Demon Slayer logo.jpeg" alt="Demon Slayer" class="card-logo">
+                <h3>Demon Slayer</h3>
+                <p>Immerse yourself in the breathtaking battles and artistry of Tanjiro’s journey to save his sister.
+                </p>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card">
+                <img src="one piece.jpeg" alt="One Piece" class="card-logo">
+                <h3>One Piece Adventures</h3>
+                <p>Set sail with Luffy and his crew as they search for the legendary treasure, One Piece.</p>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card">
+                <img src="detective conan.jpeg" alt="Cowboy Bebop" class="card-logo">
+                <h3>Cowboy Bebop</h3>
+                <p>Experience the adventures of Spike Spiegel and his crew in this legendary space-western anime.</p>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="card">
+                <img src="goku.jpeg" alt="Dragon Ball Z" class="card-logo">
+                <h3>Dragon Ball Z</h3>
+                <p>Revisit the thrilling battles of Goku, Vegeta, and the Z-Fighters as they protect Earth from powerful
+                    foes.</p>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="card">
+                <img src="deku.jpeg" alt="My Hero Academia" class="card-logo">
+                <h3>My Hero Academia</h3>
+                <p>Follow Deku and his classmates as they train to become Pro Heroes in a world filled with Quirks.</p>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="card">
+                <img src="Jujutsu Kaisen (1).jpeg" alt="Jujutsu Kaisen" class="card-logo">
+                <h3>Jujutsu Kaisen</h3>
+                <p>Discover the thrilling battles of Yuji Itadori and his journey into the world of curses.</p>
+            </div>
+
+            <!-- Card 10 -->
+            <div class="card">
+                <img src="tokyo revengers.jpeg" alt="Tokyo Revengers Logo" class="card-logo">
+                <h3>Tokyo Revengers</h3>
+                <p>Step into the gritty world of gangs, time travel, and redemption. Relive Takemichi's epic journey to
+                    save his friends and rewrite destiny.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p style="text-align: center; margin-top: 20px; font-size: 0.9rem;">&copy; 2025 Spexncil. All Rights Reserved.</p>
+    </footer>
+
+
+
+
+    <script>
+
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+    </script>
+</body>
+
+</html>

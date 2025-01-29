@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo"></div>
+        <div class="menu">
+            <a class="home" href="index.html">Home</a>
+            <a class="skill" href="skill.html">Skills</a>
+            <a class="project" href="project.html">projects</a>
+            <a class="Contact" href="contact.html">Contact</a>
+        </div>
+        <div class="hamburger" id="hamburger">☰</div>
+    </nav>
+
+    <div class="contact-container">
+        <div class="contact-header">
+            <h1>Contact me</h1>
+            <p> Please fill out the form below.</p>
+        </div>
+
+
+
+        <!-- Input fields for subject and message -->
+        <div class="input-container">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" placeholder="Enter your subject here">
+
+            <label for="message">Message:</label>
+            <textarea id="message" placeholder="Enter your message here"></textarea>
+        </div>
+
+        <!-- Gmail links -->
+        <a id="gmailAppLink" class="email-link" href="#" target="_blank">
+            send mail
+        </a>
+
+        <a id="gmailDesktopLink" class="email-link" href="#" target="_blank">
+            send mail
+        </a>
+
+        <!-- JavaScript -->
+        <script>
+            // Toggle the menu on small screens
+            const hamburger = document.getElementById('hamburger');
+            const menu = document.querySelector('.menu');
+
+            hamburger.addEventListener('click', () => {
+                menu.classList.toggle('active');
+            });
+
+
+
+
+            // Get the elements
+            const subjectInput = document.getElementById('subject');
+            const messageInput = document.getElementById('message');
+            const gmailAppLink = document.getElementById('gmailAppLink');
+            const gmailDesktopLink = document.getElementById('gmailDesktopLink');
+
+            // Function to update the Gmail links dynamically
+            function updateGmailLinks() {
+                const subject = encodeURIComponent(subjectInput.value); // Encode for URL
+                const message = encodeURIComponent(messageInput.value); // Encode for URL
+                const email = "sd1075981@gmail.com"; // Your email address
+
+                // Update the Gmail App link (for mobile Chrome)
+                gmailAppLink.href = `intent://compose?to=${email}&subject=${subject}&body=${message}#Intent;scheme=mailto;package=com.google.android.gm;end`;
+
+                // Update the Desktop Gmail link
+                gmailDesktopLink.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${message}`;
+            }
+
+            // Add event listeners to update links whenever the user types
+            subjectInput.addEventListener('input', updateGmailLinks);
+            messageInput.addEventListener('input', updateGmailLinks);
+
+            // Detect device type and display the appropriate link
+            function detectDevice() {
+                const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+                if (isMobile) {
+                    gmailAppLink.style.display = 'inline-block'; // Show mobile link
+                    gmailDesktopLink.style.display = 'none';     // Hide desktop link
+                } else {
+                    gmailAppLink.style.display = 'none';         // Hide mobile link
+                    gmailDesktopLink.style.display = 'inline-block'; // Show desktop link
+                }
+            }
+
+            // Run detection on page load
+            detectDevice();
+        </script>
+
+    </div>
+
+    <footer>
+        &copy; 2025 Shubham Deshmukh. All rights reserved.
+    </footer>
+
+</body>
+
+</html>

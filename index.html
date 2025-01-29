@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo"></div>
+        <div class="menu">
+            <a class="home" href="index.html">Home</a>
+            <a class="skill" href="skill.html">Skills</a>
+            <a class="project" href="project.html">projects</a>
+            <a class="Contact" href="contact.html">Contact</a>
+        </div>
+        <div class="hamburger" id="hamburger">☰</div>
+    </nav>
+
+    <section>
+        <div class="section1">
+            <div class="left">
+                <img src="WhatsApp Image 2024-12-26 at 12.56.42_6a61f921-modified.png" alt="">
+            </div>
+            <div class="right">
+                <p>Hello I am <br> <span class="one">Shubham Deshmukh</span>|<br>I am a <br><span class="two">WEB
+                        DEVLOPER|</span> </p>
+            </div>
+        </div>
+        <div class="section2">
+            <div class="about-container">
+                <div class="about-content">
+                    <h1>About Me</h1>
+                    <p>
+                        Hello! I'm Shubham Deshmukh, a passionate web developer with a knack for designing
+                        and building interactive, user-friendly websites and applications. I enjoy crafting
+                        innovative solutions and am constantly exploring the latest trends in web technology.
+                    </p>
+                    <p>
+                        Whether it's front-end design, back-end development, or full-stack solutions,
+                        I'm dedicated to delivering quality results tailored to your needs.
+                    </p>
+                    <a href="contact.html" class="btn">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="skill.html">Skills</a></li>
+                    <li><a href="project.html">projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="section">
+                <h3>Contact Us</h3>
+                <p><strong>Email:</strong> <a href="mailto:info@example.com">sd1075981@gmail.com</a></p>
+                <p><strong>Address:</strong> Balod, chattisgardh , INDIA</p>
+            </div>
+            <div class="section">
+                <h3>Follow Us</h3>
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/shubham-deshmukh-62738825b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B3yOVLFZnQdSDnyL5ILlEVw%3D%3D" aria-label="linkedin">linkedin</a>
+                    <a href="https://www.instagram.com/spexncil/" aria-label="Instagram">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 20px; font-size: 0.9rem;">&copy; 2025 Shubhame deshmukh. All Rights Reserved.</p>
+    </footer>
+
+
+    <script>
+        // Toggle the menu on small screens
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.querySelector('.menu');
+
+        hamburger.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
