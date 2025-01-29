@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background-color: black;
+}
+
+
+.left{
+    width: 30vw;
+    
+}
+
+.left1{
+    padding: 0px 30px;
+}
+
+
+.right{
+    width: 70vw;
+    
+}
+
+.spotifylogo img{
+    width: 90px;
+    height: 45px;
+}
+
+.homeandsearch{
+    font-size: 20px;
+}
+
+.home{
+    opacity: 60%;
+}
+.home:hover{
+    cursor: pointer;
+    opacity: 100%;
+}
+
+.search:hover{
+    cursor: pointer;
+    font-size:21px;
+}
+
+
+.left2{
+    padding: 10px 30px;
+}
+
+.library{
+    padding: 10px 15px;
+    opacity: 70%;
+}
+
+.library:hover{
+    opacity: 100%;
+}
+.sugbox{
+    height: 150px;
+    overflow-y: scroll;
+    margin: 20px 0px;
+}
+
+.sugbox1{
+    background-color: rgb(41, 40, 40);
+    margin: 5px 15px  20px 15px ;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+
+
+.sugbox1 h1{
+    font-size: 20px;
+}
+
+.footer div{
+    font-size: 12px;
+    gap: 15px;
+    padding:3px ;
+    margin: 23px 5px 2px 5px;
+    color: rgba(255, 255, 255, 0.597);
+}
+
+.lang button{
+    background-color: rgb(14, 14, 14);
+    color: white;
+    padding: 5px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.545);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.lang button:hover{
+    cursor: pointer;
+    border: 1.5px solid rgb(255, 255, 255);
+}
+
+
+.lang button img{
+    width: 20px;
+    height: 20px;
+}
+
+.navbar{
+    background-color: rgb(20, 20, 20);
+    padding:  8px 18px;
+}
+
+.navbar .nav{
+   padding: 4px;
+}
+
+.nav img{
+    height: 30px;
+    width: 30px;
+}
+
+.login {
+    background-color: white;
+    border-radius: 25px;
+    padding: 10px 18px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.login:hover{
+    cursor: pointer;
+    font-size: 17.3px;
+    font-weight: bolder;
+
+}
+.signup {
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 8px 15px;
+    color: rgba(255, 255, 255, 0.775);
+    font-size: 20px;
+    background-color:rgb(20, 20, 20) ;
+}
+
+.signup:hover{
+    color: rgb(255, 255, 255);
+    font-size: 20.3px;
+    cursor: pointer;
+}
+
+.right h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding: 15px;
+}
+
+
+

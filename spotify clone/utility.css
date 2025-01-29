@@ -1,0 +1,148 @@
+.flex{
+    display: flex;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.bggrey{
+    background-color: rgb(27, 27, 27);
+    border-radius: 10px;
+    margin: 8px 4px ;
+}
+
+.white{
+    color: white;
+}
+
+.aligncentre{
+    align-items:center ;
+}
+
+.homesearch img{
+    width: 30px;
+    height: 30px;
+}
+
+
+.justifycentre{
+    justify-content: center;
+}
+.gap{
+    gap: 15px;
+}
+
+.margin{
+    margin: 10px 0px;
+    padding-bottom: 0px;
+}
+
+.justifybetween{
+    justify-content: space-between;
+}
+
+.para2{
+    color: black;
+    background-color: white;
+    padding: 6px;
+    border-radius: 20px;
+    margin: 10px auto;
+    font-size: 18px;
+    font-weight: 1000;
+    text-align: center;
+}
+
+.para2:hover{
+    font-size: 18.5px;
+}
+
+.footer{
+    margin: 25px 10px 20px;
+}
+
+.card{
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 6px;
+    position: relative;
+}
+
+.card:hover{
+    background-color:rgba(54, 54, 54, 0.608);
+}
+
+.card img{
+    border-radius: 5px;
+    width: 170px;
+    height: 170px;
+}
+
+.cardhead{
+    font-size: 25px;
+    padding: 4px 3px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cardbody{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.606);
+}
+
+.cardholder{
+    height: 450px;
+    overflow-y: scroll;
+}
+
+
+.play img{
+    width: 25px;
+    height: 25px;
+
+}
+
+.play{
+    right: 20px;
+    bottom: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: rgb(71, 167, 71);
+    position: absolute;
+    border-radius: 50px;
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+.play:hover{
+    opacity: 1;
+    cursor: pointer;
+
+}
+
+.playbar{
+    padding: 3px;
+    background-color: rgba(255, 255, 255, 0.292);
+}
+
+.playbar img{
+    opacity: 80%;
+    width: 40px;
+    height: 40px;
+}
+
+.playbuttons{
+    gap: 5px;
+}
+
+.playbar img:hover{
+    opacity: 100%;
+    margin: 1px;
+}
+
+
+
